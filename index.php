@@ -142,7 +142,7 @@
                 <div class="content">
                   <h3><?php echo $fetch_event['title']; ?></h3>
 
-                  <p>
+                  <p> 
                     <?php echo $fetch_event['text']; ?>
                   </p>
                 
