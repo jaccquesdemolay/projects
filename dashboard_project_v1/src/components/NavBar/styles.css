@@ -1,0 +1,101 @@
+@import url("./styles.css");
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box:nth-child(1) {
+  position: relative;
+}
+
+#myTopNav {
+  display: flex;
+}
+/* Style the links inside the navigation bar */
+.topnav a, .topnav #logout {
+  display: block;
+  color: var(--colorthememode);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:nth-child(6) {
+  color: #2d6a9f;
+  font-size: 14px;
+  -webkit-text-stroke-width: 0.2px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active,
+.active {
+  background-color: var(--activenavbt);
+  border-radius: 1.6rem;
+  color: var(--boxbg);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.topnav .icon .fa {
+  color: var(--boxbg);
+}
+
+#logout{
+  cursor: pointer;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child), .topnav #logout {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+  }
+  #toggle {
+    display: none;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 900px) {
+  #myTopNav {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #myTopNav {
+    flex-direction: column;
+  }
+  .topnav {
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+  }
+  .topnav a.icon {
+    position: absolute;
+    top: 2.9rem;
+    right: 4.8rem;
+  }
+  .topnav.responsive a, .topnav.responsive #logout {
+    float: none;
+    display: block;
+  }
+  .topnav.responsive #toggle {
+    display: block;
+    margin: auto;
+  }
+}

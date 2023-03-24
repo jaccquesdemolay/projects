@@ -1,0 +1,135 @@
+.loginpg {
+  font-family: "Montserrat" !important;
+  min-height: 100vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+.loginpg section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.side {
+  background: url(../../images/bk.png) no-repeat;
+  background-size: 100% 102%;
+}
+
+.side img {
+  width: 50%;
+  max-width: 50%;
+}
+
+.login-container {
+  max-width: 450px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container .title {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.login-container .separator {
+  width: 15rem;
+  height: 0.4rem;
+  background-color: #843bc7;
+  margin: 2.4rem;
+}
+
+.login-container .welcome-message {
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 2.8rem;
+  margin-bottom: 3rem;
+  color: var(--colorthememode);
+}
+
+.login-container .login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form .form-control {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2.4rem;
+}
+.login-form input,
+button {
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  font-size: 1.1em;
+  padding: 1.4rem 6.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+.login-form input {
+  width: 100%;
+  background: var(--colorthememode);
+  color: var(--boxbg);
+  letter-spacing: 0.5px;
+}
+.login-form input ~ i {
+  position: absolute;
+  top: 50%;
+  left: 3.2rem;
+  transform: translateY(-50%);
+  color: var(--boxbg);
+  transition: color 0.4s;
+}
+.login-form input::placeholder {
+  color: var(--boxbg);
+  opacity: 1;
+}
+.login-form input:-ms-input-placeholder {
+  /*IE 10-11*/
+  color: var(--boxbg);
+}
+.login-form input::-ms-input-placeholder {
+  /*M Edge*/
+  color: var(--boxbg);
+}
+.login-form input:focus ~ i {
+  color: #843bc7;
+}
+
+.login-form button.submit {
+  color: #fff;
+  margin: 3.2rem auto;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, #ce9ffc 15.98%, #7367f0 82.85%);
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+.login-form button.submit:hover {
+  opacity: 0.9;
+}
+
+.btLoginDiv {
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ----- Responsivenesss ---- */
+@media (max-width: 1199px) {
+  .loginpg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.side {
+    display: none;
+  }
+}
